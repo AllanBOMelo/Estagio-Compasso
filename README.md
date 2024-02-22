@@ -1,17 +1,12 @@
 # <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="40px"> Bem vindo ao meu perfil!
----
 
-<div style="display: flex; align-items: center; gap: 10%;">
-    <img src="./Assets/Foto Perfil.jpg" height="200px" style="border-radius: 10px">
-    <p>
-        Olá! Meu nome é Allan Barbosa, tenho 21 anos e sou residente de Arapiraca, Alagoas. Atualmente, curso Bacharelado em Sistemas de Informação, na instituição IFAL Campus Arapiraca.<br />
-        Conheci o mundo da tecnologia durante a adolescencia, onde na epoca costumava criar alguns scripts no meu computador. Com o tempo, passei a me interessar bastante por Hardware, e passei a estudar sobre, até intregssar no curso de SI, onde me encontrei.<br />
-        Particularmente, gosto de jogar, cozinhar e programar 💻.
-    </p>
-</div>
+<img src="./Assets/Foto Perfil.jpg" height="200px">
+<p>
+    Olá! Meu nome é Allan Barbosa, tenho 21 anos e sou residente de Arapiraca, Alagoas. Atualmente, curso Bacharelado em Sistemas de Informação, na instituição IFAL Campus Arapiraca.<br />
+    Conheci o mundo da tecnologia durante a adolescencia, onde na epoca costumava criar alguns scripts no meu computador. Com o tempo, passei a me interessar bastante por Hardware, e passei a estudar sobre, até intregssar     no curso de SI, onde me encontrei.<br />
+    Particularmente, gosto de jogar, cozinhar e programar 💻.
+</p>
 
-
----
 ## Sprints 
 
 1. [Sprint 1](Sprint%201/README.md)
