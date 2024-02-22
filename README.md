@@ -1,27 +1,17 @@
+# <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="40px"> Bem vindo ao meu perfil!
+---
 
-# Instruções
-
-Neste arquivo você fará a sua apresentação, assim como a organização geral das suas entregas ao longo das Sprints. Esperamos que haja, minimamente:
- 
-- Uma seção de apresentação, com informações como cidade de residência, instituição de ensino, curso e semestre atual, experiências na área de tecnologia (se houver), hobbies e outras informações que você julgar importante para os monitores.
-
-- Uma ou mais seções para descrever o que estiver aprendendo (resumo), de maneira estruturada. Na medida que você avança no programa de bolsas, deverá alimentar para criar um portfólio de seus estudos.
-
-- De forma opcional, sugerimos que você adicione uma foto ao seu perfil do GitHub, pois utilizamos tal informação para facilitar a sua identificação ao longo do processo. Lembre-se que a informação é pública, tal qual você pode testar no exemplo do repositório da [
-The Apache Software Foundation](https://github.com/apache.png?size=250).
-
-
-Para cada Sprint, crie um arquivo README.md na respectiva pasta. Este arquivo será o relato da sua entrega. Considere organizar neste arquivo a apresentação dos códigos desenvolvidos, imagens que evidenciam a execução (se necessário) e as imagens dos certificados dos cursos solicitados.
+<div style="display: flex; align-items: center; gap: 10%;">
+    <img src="./Assets/Foto Perfil.jpg" height="200px" style="border-radius: 10px">
+    <p>
+        Olá! Meu nome é Allan Barbosa, tenho 21 anos e sou residente de Arapiraca, Alagoas. Atualmente, curso Bacharelado em Sistemas de Informação, na instituição IFAL Campus Arapiraca.<br />
+        Conheci o mundo da tecnologia durante a adolescencia, onde na epoca costumava criar alguns scripts no meu computador. Com o tempo, passei a me interessar bastante por Hardware, e passei a estudar sobre, até intregssar no curso de SI, onde me encontrei.<br />
+        Particularmente, gosto de jogar, cozinhar e programar 💻.
+    </p>
+</div>
 
 
-Veja um modelo de estrutura básica a seguir:
-
-___
-
-## Apresentação
-
-Olá, sou ...
-
+---
 ## Sprints 
 
 1. [Sprint 1](Sprint%201/README.md)
@@ -29,15 +19,32 @@ Olá, sou ...
 3. [Sprint 3](Sprint%203/README.md)
 4. ...
 
-## Desafio
-
-1. [Desafio Final](Desafio/README.md)
-
 
 ___
 
+<h1 align="center"> Estatisticas do Github </h1> 
 
-# Dicas
+| ![Allan's GitHub stats](https://github-readme-stats.vercel.app/api?username=AllanBOMelo&show_icons=true&count_private=true&bg_color=0E1620&text_color=FEFEFE&icon_color=5D8CBD&title_color=6086AD) | ![Allan's GitHub Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=AllanBOMelo&bg_color=0E1620&text_color=FEFEFE&icon_color=D6FFA5&title_color=6086AD) |
+| :------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------: |
 
-- [Mark Down - Basic Syntax](https://www.markdownguide.org/basic-syntax/)
-- [Github - Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
+
+
+<div align="center">
+
+<h1 align="center">📌 Habilidades</h1> 
+
+![HTML5 badge](https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white)
+![CSS3 badge](https://img.shields.io/badge/-CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white)
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![MySQL](https://img.shields.io/badge/mysql-000000?style=for-the-badge&logo=mysql&logoColor=white)
+![JavaScript badge](https://img.shields.io/badge/-JavaScript-F29400?style=for-the-badge&logo=javascript&logoColor=white)
+[![React badge](https://img.shields.io/badge/-ReactJS-13B5EA?style=for-the-badge&logo=react&logoColor=white&link=https://reactjs.org)](https://reactjs.org)
+  
+<br>  
+<h1 align="center">📘 Aprendendo</h1>
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Typescript](https://img.shields.io/badge/TypeScript-3178C6?&style=for-the-badge&logo=TypeScript&logoColor=white)
+  
+</div>
