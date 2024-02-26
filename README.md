@@ -1,4 +1,7 @@
-# <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="40px"> Bem vindo ao meu perfil!  
+<h1 align="center">
+  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="40px"> Bem vindo ao meu perfil!  
+</h1>
+
 
 <img src="./Assets/Foto Perfil.jpg" height="200px" align="left">
 <p align="justify">
