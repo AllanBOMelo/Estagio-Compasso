@@ -7,7 +7,7 @@ Aqui, veremos um resumo de tudo mais detalhado sobre o conteúdo que aprendi dur
 #### ⚙️ Instalação:
 Como sistema operacional para usar durante o curso, eu optei pelo WSL da distribuição **Fedora**, por questões operacionais, ja que com a distribuição **Ubuntu** eu tive problemas com a instalação de varios pacotes, e até mesmo com o desempenho da mesma.
 
-![img](../evidencias/cursoLinux/Fedora%20Terminal.png)
+![img](../../evidencias/cursoLinux/Fedora%20Terminal.png)
 
 #### 🧑‍💼 Gerenciamento de Pacotes:
 Durante o curso, foi ensinado como funciona o gerenciamento de pacotes no linux, como instalar, atualizar e remover pacotes e aplicativos.
@@ -27,7 +27,7 @@ Que é utilizado para atualizar pacotes do sistema. Porem, como estou utilizando
 
 Ao inves disso, ele é substituido pelo comando **dnf** para realizar a mesma função.
 
-![dnfUpdate](../evidencias/cursoLinux/dnf%20update.png)
+![dnfUpdate](../../evidencias/cursoLinux/dnf%20update.png)
 
 E com isso, é possível executar outros comandos para gerir pacotes, como por exemplo:
 
@@ -46,7 +46,7 @@ Ao longo do curso, também foram apresentados os comandos mais utilizados para n
 
 Para que seja possível visualizar arquivos e diretorios dentro do terminal, existe o comando **ls**. Ele será responsavel pelo papel de nos guiar pelo sistema, exibindo arquivos e diretorios, e com seus parametros ele será capaz de ordenar, ou mostrar mais informações sobre os arquivos, como as permições de usuarios e tamanho do arquivo.
 
-![ls](../evidencias/cursoLinux/ls.png)
+![ls](../../evidencias/cursoLinux/ls.png)
 
 Alguns de seus parametros mais uteis são:
 ```console
@@ -82,7 +82,7 @@ Para manipular arquivos, o terminal nos oferece alguns comandos principais, como
 
 Que podemos observar funcionando:
 
-![rmdir](../evidencias/cursoLinux/rmdir.png)
+![rmdir](../../evidencias/cursoLinux/rmdir.png)
 
 Contudo, o comando **rmdir** possui um detalhe de que ele só remove diretorios vazios, e caso seja usado em um diretorio com algum arquivo, teremos o seguinte erro:
 
@@ -115,10 +115,10 @@ Por fim, temos comandos para compactar/descompactar arquivos, sendo eles:
 ~$ unzip alvo -d destino     // Descompactar
 ```
 **Zip**
-![zip](../evidencias/cursoLinux/exemploZip.png)
+![zip](../../evidencias/cursoLinux/exemploZip.png)
 
 **Unzip**
-![unZip](../evidencias/cursoLinux/exemploUnzip.png)
+![unZip](../../evidencias/cursoLinux/exemploUnzip.png)
 
 ###### 4. Permissões
 Pelo terminal, podemos gerenciar as permissões dos usuarios para arquivos e diretorios dentro do sistema. Para visualizar as permições em arquivos, podemos utilizar o comando:
@@ -127,7 +127,7 @@ Pelo terminal, podemos gerenciar as permissões dos usuarios para arquivos e dir
 ~$ ls -l
 ```
 
-![permissoes](../evidencias/cursoLinux/permissoes.png)
+![permissoes](../../evidencias/cursoLinux/permissoes.png)
 
 Na imagem acima, podemos observar um padrão " -rw-r--r-- " que segue o padrão " 1 222 333 444 " sendo:
 1. Define se é um arquivo ou diretorio
@@ -165,4 +165,4 @@ Sendo **a** as permissões do Dono, **b** do grupo e **c** de outros. Como exemp
 ```
 Todos terão todas as permissões concebidas.
 
-![permissoes2](../evidencias/cursoLinux/permissoes2.png)
+![permissoes2](../../evidencias/cursoLinux/permissoes2.png)
