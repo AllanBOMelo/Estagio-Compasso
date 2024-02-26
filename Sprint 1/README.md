@@ -1,4 +1,4 @@
-[<- Voltar]([../README.md](https://github.com/AllanBOMelo/Estagio-Compasso))
+[<- Voltar](https://github.com/AllanBOMelo/Estagio-Compasso)
 # 🕑Sprint 1 
 
 ## Introdução 💭
