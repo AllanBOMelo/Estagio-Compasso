@@ -164,4 +164,5 @@ Sendo **a** as permissões do Dono, **b** do grupo e **c** de outros. Como exemp
 ~$ chmod 777 teste1
 ```
 Todos terão todas as permissões concebidas.
+
 ![permissoes2](../evidencias/cursoLinux/permissoes2.png)
