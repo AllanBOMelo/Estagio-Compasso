@@ -4,19 +4,18 @@
 
 
 <img src="./Assets/Foto Perfil.jpg" height="200px" align="left">
-<p align="justify">
-  Olá! Meu nome é Allan Barbosa, tenho 21 anos e sou residente de Arapiraca, Alagoas. Atualmente, curso Bacharelado em Sistemas de Informação, na instituição IFAL Campus Arapiraca.<br />
+Olá! Meu nome é Allan Barbosa, tenho 21 anos e sou residente de Arapiraca, Alagoas. Atualmente, curso Bacharelado em Sistemas de Informação, na instituição IFAL Campus Arapiraca.<br />
 Conheci o mundo da tecnologia durante a adolescencia, onde na epoca costumava criar alguns scripts no meu computador. Com o tempo, passei a me interessar bastante por Hardware, e passei a estudar sobre, até intregssar     no curso de SI, onde me encontrei.<br />
 Particularmente, gosto de jogar, cozinhar e programar 💻.
-</p>
 
+<br /><br />
 
-## <br /> <br /> Sprints 
+## 🛣️ Sprints 
 
 1. Sprint 1: [Clique Aqui](Sprint%201/README.md)
 2. Sprint 2: ⏳ Em Breve...
 
-## Desafio
+## 🎯 Desafio
 
 ⏳ Em Breve...
 
