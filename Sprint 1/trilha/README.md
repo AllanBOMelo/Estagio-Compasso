@@ -81,6 +81,7 @@ Para manipular arquivos, o terminal nos oferece alguns comandos principais, como
 ```
 
 Que podemos observar funcionando:
+
 ![rmdir](../evidencias/cursoLinux/rmdir.png)
 
 Contudo, o comando **rmdir** possui um detalhe de que ele só remove diretorios vazios, e caso seja usado em um diretorio com algum arquivo, teremos o seguinte erro:
