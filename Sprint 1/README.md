@@ -14,7 +14,7 @@ A seguir, eu preparei um resumo sobre o que aprendi nos cursos propostos na tril
 1. [Projeto Linux](./exercicios/ProjetoLAMP/README.md)
 
 
-## 📄 Desafio da Sprint com Evidências 
+## 🚩 Desafio da Sprint com Evidências 
 
 1. ...
 
