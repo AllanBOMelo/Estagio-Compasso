@@ -1,3 +1,4 @@
+[<- Voltar](../../README.md)
 # Resumo da trilha 📊
 
 Aqui, veremos um resumo de tudo mais detalhado sobre o conteúdo que aprendi durante a Sprint 1.

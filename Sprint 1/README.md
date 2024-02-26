@@ -1,5 +1,6 @@
+[<- Voltar](../README.md)
+# 🕑Sprint 1 
 
-# 🕑Sprint 1
 ## Introdução 💭
 Neste documento, irei exibir e anexar todos o itens referentes a Sprint 1, sendo seus respectivos desafios, um resumo do conteudo visto e tambem os certificados obtidos durante a trilha.
 
@@ -10,7 +11,7 @@ A seguir, eu preparei um resumo sobre o que aprendi nos cursos propostos na tril
 
 ## 📝 Exercícios 
 
-1. ...
+1. [Projeto Linux](./exercicios/ProjetoLAMP/README.md)
 
 
 ## 🖼️ Evidências 
