@@ -32,6 +32,7 @@ mkdir vendas
 ```
 
 Retorno:
+
 ![retorno](./evidencias/Desafio/inicioScriptRetorno.png)
 
 Como é possível notar, a pastas 'vendas' foi criada, logo o script funciona. Contudo, se novamente o script for executado, irá retornar o erro "mkdir: cannot create directory ‘vendas’: File exists". Para resolver isso, é viavel usar o parametro **-p** do comando **mkdir**, fazendo com que ele somente crie a pasta, caso ela não exista, ficando da seguinte forma:
@@ -42,6 +43,7 @@ mkdir -p vendas
 ```
 
 Retorno:
+
 ![retorno](./evidencias/Desafio/scriptRetorno1.png)
 
 Dessa forma, a pasta é criada e quando o script é executado novamente, não ocorrem erros, como é possivel notar acima.
@@ -54,6 +56,7 @@ cp ./dados_de_vendas.csv vendas
 ```
 
 Retorno:
+
 ![retorno](./evidencias/Desafio/scriptRetorno2.png)
 
 E por fim, pede para que o arquivo de dados seja copiado para dentro de vendas contendo a data de execução, assim, usando do comando **date +%Y%m%d** que retorna a data atual, apliquei ao comando **cp**, ficando da seguinte forma:
@@ -69,6 +72,7 @@ echo Fim do Script.
 ```
 
 Retorno:
+
 ![retorno](./evidencias/Desafio/scriptRetorno3.png)
 
 > [!NOTE]
@@ -93,6 +97,7 @@ echo Fim do Script.
 ```
 
 Retorno:
+
 ![retorno](./evidencias/Desafio/scriptRetorno4.png)
 
 Em seguida, executei outro comando de copiar o arquivo, agora para dentro da pasta backup, usando o prefixo pedido.
@@ -109,6 +114,7 @@ echo Fim do Script.
 ```
 
 Retorno:
+
 ![retorno](./evidencias/Desafio/scriptRetorno5.png)
 
 #### Gerar relatorio
@@ -136,6 +142,7 @@ echo Fim do Script.
 ```
 
 Retorno:
+
 ![retorno](./evidencias/Desafio/scriptRetorno6.png)
 
 Como podemos ver na imagem acima, o relatorio foi criado, e nele já contem a data do sistem, porém ele deve ficar dentro do diretorio de backup. Para solucionar isso, adiciono o caminho do arquivo ao "relatorio.txt", e obtenho esse codigo:
@@ -154,6 +161,7 @@ echo Fim do Script.
 ```
 
 Retorno:
+
 ![retorno](./evidencias/Desafio/scriptRetorno7.png)
 
 Com isso resolvido, vou para o proximo passo, que é:
@@ -175,6 +183,7 @@ sed -n '2p' ./dados_de_vendas.csv
 ```
 
 Retorno:
+
 ![retorno](./evidencias/Desafio/scriptRetorno8.png)
 
 Dessa forma, ele retorna apenas o primeiro registro do documento. Contudo, ainda é necessario somente a data do registro. Para isso, será necessário o comando **cut**, que possui a capacidade de separar uma linha através de um denominador e exibir apesar um dos resultados. Como o denominador em comum que separa os elementos e a virgula, e a dessa forma a data é o quinto elemento, posso juntar o comando **cut** ao comando **sed** com o uso do operador "|" e obter o seguinte resultado:
@@ -185,6 +194,7 @@ sed -n '2p' ./dados_de_vendas.csv | cut -d "," -f 5
 ```
 
 Retorno:
+
 ![retorno](./evidencias/Desafio/scriptRetorno9.png)
 
 Obtendo assim, apenas a data do registro. Passando esse comando para o script, e usando o operador >> para adicionar o resultado no arquivo de relatorio é concluida a questão da data do primeiro Registro. Para o ultimo registro, foi possivel usar o comando **tail** para obter a ultima linha do registro, e usando o mesmo comando **cut** recebo a data do registro. Adicionando ao script, temos o seguinte código:
@@ -205,6 +215,7 @@ echo Fim do Script.
 ```
 
 Retorno:
+
 ![retorno](./evidencias/Desafio/scriptRetorno10.png)
 
 Para melhor entendimento dos dados, irei juntar os comando **sed** e **tail** a um comando **echo**, e até agora este é o script:
@@ -231,6 +242,7 @@ echo Fim do Script.
 ```
 
 Retorno:
+
 ![retorno](./evidencias/Desafio/scriptRetorno11.png)
 
 Assim, o comando é executado junto ao echo para melhor leitura, e recebe como entrada o arquivo de dados, em seguida o resultado é subtraido com -1, gerando a resposta exibida. Por fim, acrescento o parametro para adicionar o resultado ao relatorio, e o código fica da seguinte forma:
@@ -253,6 +265,7 @@ echo Fim do Script.
 ```
 
 Retorno:
+
 ![retorno](./evidencias/Desafio/scriptRetorno12.png)
 
 ## 📄 Certificados 
