@@ -1,4 +1,4 @@
-[<- Voltar](../README.md)
+[<- Voltar](https://github.com/AllanBOMelo/Estagio-Compasso)
 # 🕑Sprint 1 
 
 ## Introdução 💭
@@ -15,7 +15,7 @@ A seguir, eu preparei um resumo sobre o que aprendi nos cursos propostos na tril
 2. [Desafio Sprint 1]()
 
 
-## 🖼️ Evidências 
+## 🚩 Desafio da Sprint com Evidências 
 
 Nesta sessão, irei tratar do desafio proposto ao fim da sprint, que consiste em um script para tratar dados de vendas.
 <!--- Colocar aqui a atividade no udemy --->

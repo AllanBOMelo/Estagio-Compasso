@@ -17,7 +17,7 @@ Particularmente, gosto de jogar, cozinhar e programar 💻.
 1. Sprint 1: [Clique Aqui](Sprint%201/README.md)
 2. Sprint 2: ⏳ Em Breve...
 
-## 🎯 Desafio
+## 🎯 Desafio Final
 
 ⏳ Em Breve...
 
