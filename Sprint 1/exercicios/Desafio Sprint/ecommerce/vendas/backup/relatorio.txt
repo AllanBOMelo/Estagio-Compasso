@@ -1,0 +1,4 @@
+Registros de venda [ 2024/02/27 16:50 ]
+Data Primeiro Registro: 01/01/2023
+Data Ultimo Registro: 31/01/2023
+Total Itens: 67
