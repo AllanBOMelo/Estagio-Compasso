@@ -268,6 +268,46 @@ Retorno:
 
 ![retorno](./evidencias/Desafio/scriptRetorno12.png)
 
+E por fim, para exibir as primeiras 10 linhas do arquivo de backup, será feito uso do comando **head** da seguinte forma:
+
+Código:
+```bash
+echo Executando...
+
+mkdir -p vendas/backup
+cp ./dados_de_vendas.csv vendas/"dados-$(date +%Y%m%d).csv"
+cp ./dados_de_vendas.csv vendas/backup/"backup-dados-$(date +%Y%m%d).csv"
+
+echo Registros de venda [ $(date +%Y/%m/%d\ %H:%M) ] >> ./vendas/backup/relatorio.txt
+echo Data Primeiro Registro: $(sed -n '2p' ./dados_de_vendas.csv | cut -d "," -f 5) >> ./vendas/backup/relatorio.txt 
+echo Data Ultimo Registro: $(tail -n 1 ./dados_de_vendas.csv | cut -d "," -f 5) >> ./vendas/backup/relatorio.txt
+
+echo "Total Itens: $(($(wc -l < dados_de_vendas.csv)-1))" >> ./vendas/backup/relatorio.txt 
+
+head -n 10 ./vendas/backup/"backup-dados-$(date +%Y%m%d).csv" >> ./vendas/backup/relatorio.txt
+
+echo Fim do Script.
+```
+
+Retorno:
+
+![retorno](./evidencias/Desafio/scriptRetorno13.png)
+
+
+#### Compactar arquivo
+
+Neste ponto, os requisitos de funcionamento são:
+1. Comprimir o arquivo de backup de dados em zip
+2. Apagar o arquivo de dados e o arquivo de backup
+
+Para comprimir o arquivo de backup, irei usar o comando **zip**, e para apagar os arquivos pedidos, o comando **rm**, ficando assim com o seguinte código:
+
+![evidencia](./evidencias/Desafio/evidenciaCodigo2.png)
+
+Retorno:
+![retorno](./evidencias/Desafio/scriptRetorno14.png)
+
+
 ## 📄 Certificados 
 
 
