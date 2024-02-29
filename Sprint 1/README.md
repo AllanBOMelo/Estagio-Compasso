@@ -307,6 +307,142 @@ Para comprimir o arquivo de backup, irei usar o comando **zip**, e para apagar o
 Retorno:
 ![retorno](./evidencias/Desafio/scriptRetorno14.png)
 
+#### Agendamento de execução
+
+Nesta etapa, o requisito foi de que o comando execute se segunda a quinta, às 15:27. Para realizar este agendamento de execução, fiz uso do comando do linux **crontab**, que permite agendamentos de comandos de forma bem simples. Este comando segue o seguinte modelo:
+
+```bash
+ Minuto Hora Dia_do_Mês Mês Dia_da_Semana Comando
+```
+
+Com isso, fiz a configuração de tempo conforme o solicitado, ficando da seguinte forma:
+
+![crontabConf](./evidencias/Desafio/crontabConf.png)
+> [!NOTE]
+> Nas tentativas de teste com o crontab, o caminho do script era "**/home/allan/documents/Estagio-Compasso/Sprint\ 1/exercicios/Desafio\ Sprint/ecommerce/processamento_de_vendas.sh**", porém o **contrab** por padrão executa no caminho **/home/user**, o que conflitava com os diretorios do script. Então, eu trouxe a pasta ecommerce para o mesmo diretorio de execução do script no **crontab**, com o intuito de simplificar e reduzir o diretorio.
+
+Assim, ao executar o comando para visualizar o status do crontab, podemos ver que ele está pronto para realizar a tarefa.
+
+![crontabStatus](./evidencias/Desafio/crontabInfo.png)
+
+E por fim, liberei as permições de execução do script com o chmod, deixando as permições da seguinte forma:
+
+![permissions](./evidencias/Desafio/permissions.png)
+
+#### Mudanças no Código
+
+Com tudo configurado, notei alguns detalhes na execução:
+1. Algumas informações se repetem varias vezes
+2. Os arquivos de relatório devem ser gerados com nomes diferentes
+3. Existe mais de uma linha a se ignorar no arquivo dados_de_vendas.csv
+
+Então, para resolver estes pontos, foram feitas as seguintes mudanças no código:
+###### Informações como data, hora e caminho da pasta ecommerce foram atribuidos a variaveis.
+
+```bash
+    data_sistema=$(date +%Y%m%d)
+    hora_sistema=$(date +%H%M%S)
+    diretorio_base="/home/allan/ecommerce"
+```
+###### Nome do arquivo de diretorio irá carregar data e hora do sistema, representando momento da execução
+
+```bash
+    echo Registros de venda [ $(date +%Y/%m/%d\ %H:%M) ] >> $diretorio_base vendas/backup/relatorio-$data_sistema-$hora_sistema.txt
+```
+###### Para fazer a verificação de itens da lista de vendas, foi adicionado uma função loop que verifica se o item é uma venda, com base na coluna id.
+Neste ponto, é feito uma contagem na quantidade de linhas do arquivo, para  fazer o controle do loop. E no loop, ele compara a coluna de id com um regex para garantir que a mesma contenha apenas numeros, sendo um id valido, ele soma 1 à quantidade de itens, e ao final inclui o total ao relatorio.
+
+```bash
+    total_linhas=$(wc -l < $diretorio_base/dados_de_vendas.csv)
+    total_items=0
+    regex="^[0-9]+$"
+
+    for ((i=1; i<=$total_linhas; i+=1))
+    do
+    id=$(sed -n "$i"p $diretorio_base/dados_de_vendas.csv | cut -d "," -f 1)
+    [[ $id =~ $regex ]] && ((total_items++))
+    done
+
+    echo "Total Itens: $total_items" >> $diretorio_base/vendas/backup/relatorio-$data_sistema-$hora_sistema.txt
+```
+
+###### Resultado
+Com essas alterações aplicadas, o código ficou da seguinte maneira:
+```bash
+    echo Executando...
+
+    # Variaveis Principais
+    data_sistema=$(date +%Y%m%d)
+    hora_sistema=$(date +%H%M%S)
+    diretorio_base="/home/allan/ecommerce"
+
+    # Criar diretorios e copiar arquivos 
+    mkdir -p $diretorio_base/vendas/backup
+    cp $diretorio_base/dados_de_vendas.csv $diretorio_base/vendas/"dados-$data_sistema.csv"
+    cp $diretorio_base/dados_de_vendas.csv $diretorio_base/vendas/backup/"backup-dados-$data_sistema.csv"
+
+
+    # Inserir Data atual
+    echo Registros de venda [ $(date +%Y/%m/%d\ %H:%M) ] >> $diretorio_base/vendas/backup/relatorio-$data_sistema-$hora_sistema.txt
+
+    echo >> $diretorio_base/vendas/backup/relatorio-$data_sistema-$hora_sistema.txt
+
+    # Inserir Data Primeiro e Ultimo Registro
+    echo Data Primeiro Registro: $(sed -n '2p' $diretorio_base/dados_de_vendas.csv | cut -d "," -f 5) >> $diretorio_base/vendas/backup/relatorio-$data_sistema-$hora_sistema.txt 
+    echo Data Ultimo Registro: $(tail -n 1 $diretorio_base/dados_de_vendas.csv | cut -d "," -f 5) >> $diretorio_base/vendas/backup/relatorio-$data_sistema-$hora_sistema.txt
+
+    # Inserir Total de Itens
+    total_linhas=$(wc -l < $diretorio_base/dados_de_vendas.csv)
+    total_items=0
+    regex="^[0-9]+$"
+
+    for ((i=1; i<=$total_linhas; i+=1))
+    do
+    id=$(sed -n "$i"p $diretorio_base/dados_de_vendas.csv | cut -d "," -f 1)
+    [[ $id =~ $regex ]] && ((total_items++))
+    done
+
+    echo "Total Itens: $total_items" >> $diretorio_base/vendas/backup/relatorio-$data_sistema-$hora_sistema.txt
+
+    # Para estetica no relatorio
+    echo >> $diretorio_base/vendas/backup/relatorio-$data_sistema-$hora_sistema.txt
+
+    # Inserir 10 Primeiros Registros
+    head -n 10 $diretorio_base/vendas/backup/"backup-dados-$data_sistema.csv" >> $diretorio_base/vendas/backup/relatorio-$data_sistema-$hora_sistema.txt
+
+    # Comprimir arquivo
+    zip -r $diretorio_base/vendas/backup/"backup-dados-$data_sistema.zip" $diretorio_base/vendas/backup/"backup-dados-$data_sistema.csv"
+    rm $diretorio_base/vendas/backup/"backup-dados-$data_sistema.csv"
+    rm $diretorio_base/vendas/"dados-$data_sistema.csv"
+
+    # Para estetica no relatorio
+    echo >> $diretorio_base/vendas/backup/relatorio-$data_sistema-$hora_sistema.txt
+    echo ====================================== >> $diretorio_base/vendas/backup/relatorio-$data_sistema-$hora_sistema.txt
+    echo >> $diretorio_base/vendas/backup/relatorio-$data_sistema-$hora_sistema.txt
+
+    echo Fim do Script.
+```
+
+E executando, temos:
+
+![retorno](./evidencias/Desafio/scriptRetorno15.png)
+
+#### Consolidador de vendas
+Mais adiante no desafio, é pedido que seja criado um script que seja executado manualmente e una todos os relatorios gerados em um relatorio final. Então, sabendo que o comando cat consegue retornar todos os arquivos de uma mesma extensão, como .txt, criei o seguinte script:
+
+```bash
+cat vendas/backup/*.txt > vendas/relatorio_final-$(date +%Y%m%d).txt
+```
+
+Obtendo o seguinte resultado:
+
+Executando script:
+
+![retornoConsolidador](./evidencias/Desafio/consolidadorExec.png)
+
+Relatorio Final Gerado:
+
+![relatorioFinal](./evidencias/Desafio/relatorioFinal.txt.png)
 
 ## 📄 Certificados 
 
